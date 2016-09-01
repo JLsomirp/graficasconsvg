@@ -1,0 +1,221 @@
+/*Creado en Sass*/
+@import reset.sass
+
+/*Variables*/
+$cabezal_altura: 80px
+$cabezal_ancho: 980px
+$menu_altura: 60px
+$menu_ancho: $cabezal_ancho
+$graficas_altura: 800px
+$graficas_ancho: $cabezal_ancho
+$grafica_altura: $graficas_altura - 140px - 5px /* 650px */
+$grafica_ancho: $cabezal_ancho
+
+$color_amarillo: #FFC60B
+$color_amarillo2: #EDAF00
+$color_gris: #F9F9F9
+$color_gris2: #DDDDDD
+$color_peach: #FAEBE0
+$color_peach2: #F2E4D9
+
+/*Algunos ajustes*/
+h1, h3
+	font-family: helvetica, arial, sans-serif
+	font-weight: 700
+h2, h4, h6, ul#menu li
+	font-family: helvetica, arial, sans-serif
+	font-weight: 400
+h5
+	font-family: helvetica, arial, sans-serif
+	font-weight: 700
+p
+	font-family: Arial, Helvetica, sans-serif
+	font-weight: normal
+
+/*Estilos CSS*/
+#todo
+	width: $cabezal_ancho
+	height: $menu_altura + $graficas_altura - 57px - 20px
+	background-color: #333
+	margin: 0 auto
+	overflow: hidden
+
+ul#menu
+	width: $menu_ancho
+	height: $menu_altura
+	overflow: hidden
+	background-color: $color_gris2
+	li
+		font-size: 20px
+		line-height: 20px
+		text-transform: uppercase
+		height: 20px
+		margin: 12px 30px 6px 0
+		padding: 8px 28px
+		color: #4D4D4D
+		border: 1px solid #4D4D4D
+		float: left
+		cursor: pointer
+	li:hover, li.sel
+		border: 1px solid $color_amarillo
+		background-color: $color_amarillo
+		color: white
+
+	li.titulo
+		width: 120px
+		border: none
+		background-image: url("../img/rankings.png")
+		background-repeat: no-repeat
+		background-position: center left
+		padding: 16px 30px 24px 90px
+		margin: 0
+		line-height: 34px
+		font-size: 26px
+		cursor: text
+	li.titulo:hover
+		border: none
+		background-color: transparent
+		color: #4D4D4D
+
+ul#graficas
+	width: $graficas_ancho * 3
+	height: $graficas_altura - 57px - 20px
+	background-color: $color_gris
+	overflow: hidden
+	li.grafica
+		width: $grafica_ancho
+		height: 100%
+		position: relative
+		background-color: $color_gris
+		float: left
+		overflow: hidden
+		div.pleca
+			width: $grafica_ancho - 40px
+			/*height: 0px*/
+			/*height: 12px*/
+			border-bottom: 5px solid $color_amarillo
+			/*font-family: Relato, Helvetica, sans-serif*/
+			/*font-size: 12px*/
+			/*line-height: 12px*/
+			/*color: black*/
+			padding: 0 20px
+			/*padding: ((56px - 12px) / 2) 20px*/
+			/*text-transform: uppercase*/
+		div#canvas_smartphones,
+		div#canvas_tabletas,
+		div#canvas_escritorio
+			width: 760px
+			height: $graficas_altura - 82px
+			background-color: $color_gris
+			margin: 0
+			overflow-y: auto
+			position: relative
+			div.info
+				padding: 5px 10px
+				position: absolute
+				top: 50%
+				left: 50%
+				background-color: rgba(0, 0, 0, 0.6)
+				color: white
+				display: none
+				z-index: 10
+				h3
+					font-family: Geogrotesque, Relato, Helvetica, sans-serif
+					font-weight: 700
+					font-size: 20px
+					text-align: center
+					margin: -10px -10px 5px -10px
+					padding: 5px
+					span
+						font-size: 12px
+						padding: 0 0 0 5px
+				h4
+					font-size: 12px
+					font-weight: 700
+					text-transform: uppercase
+					text-align: center
+		div.acotaciones
+			position: absolute
+			/* right: 240px */
+			/* top: 30px */
+			top: 20px
+			left: 55px
+			right: 220px
+			margin: 0 auto
+			width: 185px
+			/* centrado -^ */
+			border: 1px solid #333
+			border-radius: 3px
+			padding: 3px 10px
+			background-color: $color_gris
+			display: block
+			h5
+				font-size: 14px
+				text-transform: uppercase
+				span
+					font-size: 12px
+					font-weight: 700
+			h6
+				font-size: 12px
+				text-transform: uppercase
+		div.listado
+			width: 220px
+			height: 100%
+			position: absolute
+			top: 5px
+			left: (980px - 220px)
+			background-color: #e7e7e7
+			z-index: 0
+			h1
+				font-family: Relato, Arial, Helvetica, sans-serif
+				text-align: center
+				font-size: 20px
+				line-height: 20px
+				padding: 0 0 5px 0
+				margin: 5px 10px 10px 10px
+				text-transform: uppercase
+				border-bottom: 1px solid #333
+			p
+				width: 208px
+				height: 24px
+				margin: 0 0 5px 10px
+				font-size: 10px
+				font-weight: 400
+				text-align: left
+				float: left
+				text-transform: uppercase
+				cursor: pointer
+				span
+					font-size: Geogrotesque, Glosa, Relato, Arial, Helvetica, sans-serif
+					font-weight: 700
+					font-size: 14px
+					line-height: 14px
+					height: 14px
+					width: 50px
+					color: white
+					margin: 0 5px 5px 0
+					padding: 5px 0
+					display: inline-block
+					text-transform: uppercase
+					text-align: center
+		div.escala
+			width: 40px
+			background-color: rgba(249,249,249, 0.4)
+			height: 100%
+			position: absolute
+			top: 5px
+			left: 0
+			div
+				width: 100%
+				font-family: Arial, Helvetica, sans-serif
+				font-weight: 100
+				font-size: 10px
+				color: #A0A0A0
+				position: absolute
+				left: 0
+				text-align: right
+				margin: 0 5px 0 0
+
+	li.smartphones
+	li.tabletas
+	li.escritorio

@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Graficas con SVG</title>
+<script type="text/javascript" src="js-css/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="js-css/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js-css/data.min.js"></script>
+<script type="text/javascript" src="js-css/raphael.min.js"></script>
+<script type="text/javascript" src="js-css/chart_JS-SVG.min.js"></script>
+<script type="text/javascript" src="js-css/funciones.min.js"></script>
+<link href="js-css/estilos.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<div id="todo">
+	<ul id="menu">
+		<li class="titulo">Rankings:</li>
+		<li class="sel">smartphones</li>
+		<li>tabletas</li>
+		<li>escritorio</li>
+	</ul>
+	<ul id="graficas">
+		<li class="grafica smartphones">
+			<div class="pleca">
+				<!--smartphones-->
+			</div>
+			<div id="canvas_smartphones">
+				<!--div class="info"></div>
+				<div class="listado"></div-->
+			</div>
+		</li>
+		<li class="grafica tabletas">
+			<div class="pleca">
+				<!--tabletas-->
+			</div>
+			<div id="canvas_tabletas">
+				<!--div class="info"></div>
+				<div class="listado"></div-->
+			</div>
+		</li>
+		<li class="grafica escritorio">
+			<div class="pleca">
+				<!--escritorio-->
+			</div>
+			<div id="canvas_escritorio">
+				<!--div class="info"></div>
+				<div class="listado"></div-->
+			</div>
+		</li>
+	</ul>
+</div>
+
+<script type="text/javascript">
+	Grafica("Linear", "canvas_smartphones", Data_smartphones);// tipo, en_donde, que info
+	Grafica("Linear", "canvas_tabletas", Data_tabletas);// tipo, en_donde, que info
+	Grafica("Linear", "canvas_escritorio", Data_escritorio);// tipo, en_donde, que info
+</script>
+
+</body>
+</html>
